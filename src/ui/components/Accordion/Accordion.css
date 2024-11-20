@@ -1,0 +1,38 @@
+.accordion {
+  border: 1px solid var(--grey-light);
+  border-radius: 8px;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion-item:not(:first-child) {
+  border-top: 1px solid var(--grey-light);
+}
+
+.accordion-item__button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 76px;
+  width: 100%;
+  padding: 24px;
+  gap: 16px;
+  opacity: 0px;
+  color: var(--black-light);
+}
+
+.accordion-item__state {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--grey);
+  margin-left: auto;
+}
+
+.accordion-item__content {
+  padding: 16px;
+}
