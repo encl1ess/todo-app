@@ -1,0 +1,30 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  padding: 16px;
+  gap: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.checkbox:hover,
+.checkbox:focus {
+  background-color: var(--green-light);
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--green);
+  border: none;
+  background: var(--green) url('/public/icons/check.svg') center no-repeat;
+  background-size: 10px 8px;
+}

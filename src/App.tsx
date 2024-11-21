@@ -1,5 +1,12 @@
+import { Layout } from './ui/components/Layout';
+import { GroupedTasks } from './components/GroupedTasks/GroupedTasks';
+
 function App() {
-  return <main className="App"></main>;
+  return (
+    <Layout>
+      <GroupedTasks />
+    </Layout>
+  );
 }
 
 export default App;

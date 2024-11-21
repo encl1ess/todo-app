@@ -6,13 +6,13 @@ import { Paragraph } from '@/ui/components/Paragraph';
 interface AccordionItemProps {
   label: string;
   children: ReactNode;
-  onClick?: (value: string) => void;
+  isAccent?: boolean;
 }
 
 const AccordionItem: FC<AccordionItemProps> = ({
   children,
-  onClick,
   label,
+  isAccent,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -22,23 +22,27 @@ const AccordionItem: FC<AccordionItemProps> = ({
 
   return (
     <div className="accordion-item">
-      <button className="accordion-item__button" onClick={toggleAccordionItem}>
+      <button
+        className={clsx(
+          'accordion-item__button',
+          isAccent && 'accordion-item__button--accent',
+        )}
+        onClick={toggleAccordionItem}
+      >
         <img
-          src="/icons/booking-features.svg"
-          alt=""
-          className="icon icon__document"
+          src={
+            isAccent ? './icons/booking-ok.svg' : './icons/booking-features.svg'
+          }
+          alt={`${isExpanded ? 'Hide' : 'Show'} tasks' list`}
         />
         <Paragraph size="large">{label}</Paragraph>
 
         <Paragraph className="accordion-item__state" size="medium">
           {isExpanded ? 'Hide' : 'Show'}
           <img
-            src="/icons/angle-down.svg"
-            alt=""
-            className={clsx(
-              'icon icon__arrow',
-              isExpanded && 'icon__arrow--expanded',
-            )}
+            src="./icons/angle-down.svg"
+            alt={`${isExpanded ? 'Hide' : 'Show'} tasks' list`}
+            className={clsx(isExpanded && 'icon__arrow--expanded')}
           />
         </Paragraph>
       </button>

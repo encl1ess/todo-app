@@ -1,6 +1,8 @@
 .accordion {
   border: 1px solid var(--grey-light);
   border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .accordion-item {
@@ -21,8 +23,11 @@
   width: 100%;
   padding: 24px;
   gap: 16px;
-  opacity: 0px;
   color: var(--black-light);
+}
+
+.accordion-item__button--accent {
+  color: var(--accent);
 }
 
 .accordion-item__state {
