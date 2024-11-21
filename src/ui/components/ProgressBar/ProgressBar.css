@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+
+  @media only screen and (max-width: 720px) {
+    padding: 24px 0;
+  }
 }
 
 .progress-bar__title {
@@ -45,7 +49,12 @@
 }
 
 .progress-bar__value--small-shift {
-  right: 6px;
+  right: 8px;
+
+  @media only screen and (max-width: 720px) {
+    color: var(--green);
+    right: -32px;
+  }
 }
 
 .progress-bar__value--right-shift {

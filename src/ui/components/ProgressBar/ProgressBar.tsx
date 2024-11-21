@@ -23,7 +23,7 @@ const ProgressBar: FC<ProgressBarProps> = ({ title, value }) => {
             className={clsx(
               'progress-bar__value',
               value < 10 && 'progress-bar__value--right-shift',
-              value >= 10 && value < 12 && 'progress-bar__value--small-shift',
+              value >= 10 && value < 18 && 'progress-bar__value--small-shift',
             )}
           >
             {value}%

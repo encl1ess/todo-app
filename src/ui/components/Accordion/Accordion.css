@@ -24,6 +24,7 @@
   padding: 24px;
   gap: 16px;
   color: var(--black-light);
+  text-align: left;
 }
 
 .accordion-item__button--accent {

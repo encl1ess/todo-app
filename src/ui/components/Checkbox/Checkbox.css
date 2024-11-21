@@ -20,6 +20,7 @@ input[type='checkbox'] {
   -webkit-appearance: none;
   border: 1px solid var(--grey);
   border-radius: 4px;
+  flex-shrink: 0;
 }
 
 input[type='checkbox']:checked {
